@@ -32,20 +32,20 @@ After packaging locally, you can run docker build to create a container.
 Customize command below for your project, repo, and app name:
 
 ```bash
-docker build . -t us-central1-docker.pkg.dev/YOUR-PROJECT/YOUR-REPO/demo-app
+docker build . -t $REGION-docker.pkg.dev/$PROJECT_ID/$REGISTRY/quote
 ```
 ## Docker run
 
 Customize command below for your project, repo, and app name:
 ```bash
-docker run us-central1-docker.pkg.dev/YOUR-PROJECT/YOUR-REPO/demo-app
+docker run $REGION-docker.pkg.dev/$PROJECT_ID/$REGISTRY/quote
 ```
 
 ## Docker push
 
 Customize command below for your project, repo, and app name:
 ```bash
-docker push us-central1-docker.pkg.dev/YOUR-PROJECT/YOUR-REPO/demo-app
+docker push $REGION-docker.pkg.dev/$PROJECT_ID/$REGISTRY/quote
 ```
 
 ## Continuous development with Skaffold
@@ -55,5 +55,5 @@ docker push us-central1-docker.pkg.dev/YOUR-PROJECT/YOUR-REPO/demo-app
 3. Customize command below for your project and repo, and run:
 
 ```bash
-skaffold dev --default-repo=us-central1-docker.pkg.dev/YOUR-PROJECT/YOUR-REPO
+skaffold dev --default-repo=$REGION-docker.pkg.dev/$PROJECT_ID/$REGISTRY/quote
 ```
