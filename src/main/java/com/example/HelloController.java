@@ -21,6 +21,6 @@ public class HelloController {
         // System.out.println("Database URL" + env.getProperty("spring.datasource.url"));
         // System.out.println("Database URL" + env.getProperty("spring.datasource.user"));
         
-        return String.format("Hello from your %s environment !!! %s", target, System.getProperty("user.home"));
+        return String.format("Hello from %s environment !!! %s", target, System.getProperty("user.home"));
     }
 }
