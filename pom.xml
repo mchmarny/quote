@@ -10,9 +10,9 @@
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>com.example</groupId>
-  <artifactId>demo-app</artifactId>
+  <artifactId>quote</artifactId>
   <version>1.0.0</version>
-  <name>demo-app</name>
+  <name>quote</name>
   <description>Spring Quotes App in Google Cloud</description>
 
   <properties>

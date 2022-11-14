@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello
+  name: quote
   labels:
-    app: hello
+    app: quote
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello
+      app: quote
   template:
     metadata:
       labels:
-        app: hello
+        app: quote
     spec:
       containers:
-      - name: hello
-        image: hello
+      - name: quote
+        image: quote
         env:
           - name: PORT
             value: "8080"

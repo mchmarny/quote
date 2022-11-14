@@ -1,12 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello
+  name: quote
 spec:
   template:
     spec:
       containers:
-      - name: hello
+      - name: quote
         env:
           - name: PORT
             value: "8080"

@@ -10,7 +10,7 @@ This is a Maven quote rotation sample application courtesy of [ddobrin](https://
 ## Integration test with Maven
 
 1. Ensure a local docker environment is running
-2. From the demo-app directory run:
+2. Next, in the root of this depo, run:
 
 ```bash
 mvn verify
@@ -19,7 +19,7 @@ mvn verify
 ## Maven package
 
 1. Ensure a local docker environment is running
-2. From the demo-app directory run:
+2. Next, in the root of this depo, run:
 
 ```bash
 mvn package

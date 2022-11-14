@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demo-app
+  name: quote
   labels:
-    app: demo-app
+    app: quote
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: demo-app
+      app: quote
   template:
     metadata:
       labels:
-        app: demo-app
+        app: quote
     spec:
       securityContext:
         fsGroup: 1000
@@ -20,14 +20,14 @@ spec:
         runAsNonRoot: true
         runAsUser: 1000
       containers:
-      - name: demo-app
+      - name: quote
         securityContext:
             allowPrivilegeEscalation: false
             capabilities:
               drop:
                 - all
             privileged: false
-        image: demo-app
+        image: quote
         env:
           - name: PORT
             value: "8080"

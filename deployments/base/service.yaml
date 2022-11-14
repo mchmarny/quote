@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello
+  name: quote
   labels:
-    app: hello
+    app: quote
 spec:
   ports:
   - name: http
     port: 8080
   type: LoadBalancer
   selector:
-    app: hello 
+    app: quote 
 
