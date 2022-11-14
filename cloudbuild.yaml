@@ -2,9 +2,9 @@
 # NOTE: currently requires SCM triggering due to dependency on the COMMIT_SHA variable
 # Update these values, if desired
 substitutions:
-  _REPO_NAME: maven-demo-app
-  _APP_NAME: demo-app
-  _PIPELINE_NAME: security-demo-pipeline
+  _REPO_NAME: quote
+  _APP_NAME: quote
+  _PIPELINE_NAME: deploy-quote-pipeline
 steps:
   # integration tests app with Maven
   - name: maven:3-eclipse-temurin-17

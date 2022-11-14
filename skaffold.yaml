@@ -6,8 +6,8 @@ build:
   # local: 
   #   push: false
   artifacts:
-  - image: demo-app
-    context: demo-app
+  - image: quote
+    context: quote
     docker:
       dockerfile: Dockerfile    
     sync:
@@ -39,5 +39,5 @@ profiles:
           - k8s/overlays/prod
 portForward:
 - resourceType: deployment
-  resourceName: demo-app
+  resourceName: quote
   port: 8080

@@ -1,29 +1,28 @@
-# replace "cloudy-demos" in the three targets below with your actual project(s)
 apiVersion: deploy.cloud.google.com/v1
 kind: DeliveryPipeline
 metadata:
-  name: security-demo-pipeline
+  name: deploy-demo-pipeline
 description: Security-focused CI/CD pipeline on GCP
 serialPipeline:
  stages:
- - targetId: test-sec
- - targetId: prod-sec
+ - targetId: demo-test
+ - targetId: demo-prod
 ---
 
 apiVersion: deploy.cloud.google.com/v1
 kind: Target
 metadata:
-  name: test-sec
+  name: demo-test
 description: test cluster
 gke:
-  cluster: projects/cloudy-demos/locations/us-central1-a/clusters/test-sec
+  cluster: projects/cloudy-demos/locations/us-west1-c/clusters/demo-test
 ---
 
 apiVersion: deploy.cloud.google.com/v1
 kind: Target
 metadata:
-  name: prod-sec
+  name: demo-prod
 description: prod cluster
 requireApproval: true
 gke:
-  cluster: projects/cloudy-demos/locations/us-central1-a/clusters/prod-sec
+  cluster: projects/cloudy-demos/locations/us-west1-c/clusters/demo-prod
