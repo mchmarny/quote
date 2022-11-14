@@ -29,21 +29,17 @@ mvn package
 
 After packaging locally, you can run docker build to create a container.
 
-Customize command below for your project, repo, and app name:
-
 ```bash
 docker build . -t $REGION-docker.pkg.dev/$PROJECT_ID/$REGISTRY/quote
 ```
 ## Docker run
 
-Customize command below for your project, repo, and app name:
 ```bash
 docker run $REGION-docker.pkg.dev/$PROJECT_ID/$REGISTRY/quote
 ```
 
 ## Docker push
 
-Customize command below for your project, repo, and app name:
 ```bash
 docker push $REGION-docker.pkg.dev/$PROJECT_ID/$REGISTRY/quote
 ```

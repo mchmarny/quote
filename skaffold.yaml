@@ -1,4 +1,4 @@
-apiVersion: skaffold/v2beta26
+apiVersion: skaffold/v2beta29
 kind: Config
 metadata:
   name: modern-java-google-cloud
@@ -7,7 +7,6 @@ build:
   #   push: false
   artifacts:
   - image: quote
-    context: quote
     docker:
       dockerfile: Dockerfile    
     sync:
@@ -15,28 +14,28 @@ build:
 deploy:
   kustomize:
     paths:
-      - k8s/overlays/dev
+      - deployments/overlays/dev
 profiles:
   - name: cloud-dev
     deploy:
       kustomize:
         paths:
-          - k8s/overlays/cloud-dev
+          - deployments/overlays/cloud-dev
   - name: test
     deploy:
       kustomize:
         paths:
-          - k8s/overlays/test
+          - deployments/overlays/test
   - name: staging
     deploy:
       kustomize:
         paths:
-          - k8s/overlays/staging
+          - deployments/overlays/staging
   - name: prod
     deploy:
       kustomize:
         paths:
-          - k8s/overlays/prod
+          - deployments/overlays/prod
 portForward:
 - resourceType: deployment
   resourceName: quote
